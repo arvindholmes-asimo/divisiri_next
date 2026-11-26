@@ -1,0 +1,1343 @@
+{
+  "company": {
+    "name": "Divisiri Healthcare Pvt Ltd",
+    "manufacturer": "SK Healthcare Formulations Pvt Ltd",
+    "shelfLife": "24 months from date of manufacture (ambient storage)",
+    "rdaBasis": "% RDA based on ICMR Guidelines 2020, 2,000 kcal diet",
+    "disclaimer": "This product is not intended to diagnose, treat, cure or prevent any disease. Food supplements should not be used as a substitute for a varied diet."
+  },
+  "concerns": [
+    {
+      "slug": "bone-joint-health",
+      "name": "Bone & Joint",
+      "position": 0,
+      "products": [
+        "bonfortis-k2",
+        "vita-dk7",
+        "orthoflex-pro"
+      ]
+    },
+    {
+      "slug": "gut-health",
+      "name": "Gut & Digestion",
+      "position": 1,
+      "products": [
+        "herbagut",
+        "charcoal-pro",
+        "herbasome",
+        "shredd-360"
+      ]
+    },
+    {
+      "slug": "stress-sleep",
+      "name": "Stress, Mood & Sleep",
+      "position": 2,
+      "products": [
+        "sadnil",
+        "stressnil",
+        "sleep-support"
+      ]
+    },
+    {
+      "slug": "immunity",
+      "name": "Immunity",
+      "position": 3,
+      "products": [
+        "primmune-pro",
+        "cordyvital",
+        "dailyvit"
+      ]
+    },
+    {
+      "slug": "energy-stamina",
+      "name": "Energy & Stamina",
+      "position": 4,
+      "products": [
+        "power-fresh-plus",
+        "cordyvital",
+        "green-good",
+        "menmaxx"
+      ]
+    },
+    {
+      "slug": "women-pregnancy",
+      "name": "Women & Pregnancy",
+      "position": 5,
+      "products": [
+        "momvit",
+        "stressnil",
+        "bonfortis-k2"
+      ]
+    },
+    {
+      "slug": "mens-health",
+      "name": "Men's Health",
+      "position": 6,
+      "products": [
+        "menmaxx",
+        "cordyvital"
+      ]
+    },
+    {
+      "slug": "heart-skin",
+      "name": "Heart & Skin (Omega)",
+      "position": 7,
+      "products": [
+        "omegasea",
+        "vita-dk7"
+      ]
+    },
+    {
+      "slug": "weight-detox",
+      "name": "Weight Management & Detox",
+      "position": 8,
+      "products": [
+        "shredd-360",
+        "green-good",
+        "charcoal-pro"
+      ]
+    },
+    {
+      "slug": "medical-nutrition",
+      "name": "Clinical / Medical Nutrition",
+      "position": 9,
+      "products": [
+        "optimeal-pro",
+        "optimeal-maxx",
+        "healogen"
+      ]
+    },
+    {
+      "slug": "daily-wellness",
+      "name": "Daily Wellness",
+      "position": 10,
+      "products": [
+        "dailyvit",
+        "omegasea",
+        "primmune-pro"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "slug": "bonfortis-k2",
+      "position": 0,
+      "name": "Bonfortis-K2",
+      "tagline": "Powerup Your Bones",
+      "format": "Tablets",
+      "pack": "30 tablets, 150 cc HDPE bottle + monocarton",
+      "category": "Bone & Joint",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Calcium (citrate malate, TCP, coral calcium)",
+          "amount": "300 mg",
+          "rda": "50%"
+        },
+        {
+          "name": "Phosphorus",
+          "amount": "150 mg",
+          "rda": "25%"
+        },
+        {
+          "name": "Magnesium",
+          "amount": "75 mg",
+          "rda": "22%"
+        },
+        {
+          "name": "Zinc",
+          "amount": "6 mg",
+          "rda": "50%"
+        },
+        {
+          "name": "Vitamin D3",
+          "amount": "300 IU",
+          "rda": "50%"
+        },
+        {
+          "name": "Vitamin K2-7 (natural)",
+          "amount": "27.5 mcg",
+          "rda": "50%"
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "1 mcg",
+          "rda": "100%"
+        }
+      ],
+      "ingredients": "As above. Other: SSG, MCC, PVP K30, Starch, Silicon dioxide, Magnesium stearate, permitted colours.",
+      "benefits": [
+        "Calcium : phosphorus at ideal 2:1 for bone formation",
+        "Calcium from 3 sources for better bioavailability",
+        "Natural Vitamin K2-7 helps prevent osteoporosis",
+        "100% RDA Ca, D3, B12, Zn per 2-tablet serving"
+      ],
+      "packClaims": [
+        "3 Different Sources of Calcium",
+        "Ca:P Ratio of 2:1, Ideal for Bone Formation",
+        "Helps Prevent Osteoporosis"
+      ],
+      "dosage": "2 tablets per day or as suggested by physician",
+      "precautions": "Keep out of reach of children."
+    },
+    {
+      "slug": "charcoal-pro",
+      "position": 1,
+      "name": "CharcoalPro",
+      "tagline": "Natural Gut Detox",
+      "format": "Veg capsules",
+      "pack": "30 veg capsules, HDPE bottle",
+      "category": "Gut & Digestive Health",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Activated charcoal (coconut shell)",
+          "amount": "500 mg",
+          "rda": ""
+        },
+        {
+          "name": "Bacillus coagulans",
+          "amount": "2 billion CFU",
+          "rda": ""
+        }
+      ],
+      "ingredients": "As above. Other: Maltodextrin, Silicon dioxide, Magnesium stearate. HPMC shell.",
+      "benefits": [
+        "Coconut-shell activated charcoal for natural detox",
+        "Reduces excess gas and bloating",
+        "Probiotic-enriched for digestion",
+        "Non-habit forming"
+      ],
+      "packClaims": [
+        "Cleanses Toxins from Gut",
+        "Reduces Gas, Bloating & Flatulence",
+        "Supports Digestive Health"
+      ],
+      "dosage": "1-2 capsules per day or as suggested by physician",
+      "precautions": "Take 2 hours apart from other medicines."
+    },
+    {
+      "slug": "cordyvital",
+      "position": 2,
+      "name": "CordyVital",
+      "tagline": "Goodness of Cordyceps",
+      "format": "Veg capsules",
+      "pack": "30 capsules",
+      "category": "Energy, Recovery & Immunity",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Cordyceps sinensis extract (0.2% adenosine, 1% cordycepin, HPLC)",
+          "amount": "500 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "As above. Other: Maltodextrin, Magnesium stearate, Silicon dioxide. HPMC shell.",
+      "benefits": [
+        "Helps recovery from illness and exercise",
+        "Reduces inflammation and oxidative stress",
+        "Supports liver and lung function",
+        "Supports tolerance during chemo/radiation (adjunct, under oncologist advice)",
+        "Improves vitality, helps manage fatigue"
+      ],
+      "packClaims": [
+        "Reduces Inflammation & Oxidative Stress",
+        "Improves Vitality & Boosts Metabolism",
+        "Helps in Fatigue Management"
+      ],
+      "dosage": "1 capsule per day or as directed by physician",
+      "precautions": "Adults 18+. Consult physician if pregnant/lactating/on medication."
+    },
+    {
+      "slug": "dailyvit",
+      "position": 3,
+      "name": "DailyVit",
+      "tagline": "Daily Dose of Wellness",
+      "format": "Veg capsules",
+      "pack": "See label",
+      "category": "Daily Multivitamin",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Magnesium",
+          "amount": "100 mg",
+          "rda": "29%"
+        },
+        {
+          "name": "Iron",
+          "amount": "12 mg",
+          "rda": "71%"
+        },
+        {
+          "name": "Zinc",
+          "amount": "7 mg",
+          "rda": "58%"
+        },
+        {
+          "name": "Iodine",
+          "amount": "105 mcg",
+          "rda": "70%"
+        },
+        {
+          "name": "Selenium",
+          "amount": "12 mcg",
+          "rda": "30%"
+        },
+        {
+          "name": "Vitamin C",
+          "amount": "30 mg",
+          "rda": "75%"
+        },
+        {
+          "name": "Vitamin E",
+          "amount": "7 mg",
+          "rda": "93%"
+        },
+        {
+          "name": "Vitamin K1",
+          "amount": "27.5 mcg",
+          "rda": "50%"
+        },
+        {
+          "name": "Vitamin D3",
+          "amount": "320 IU",
+          "rda": "80%"
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "0.8 mcg",
+          "rda": "80%"
+        },
+        {
+          "name": "Folic acid",
+          "amount": "94.1 mcg",
+          "rda": "80%"
+        },
+        {
+          "name": "Curcumin",
+          "amount": "30 mg",
+          "rda": ""
+        },
+        {
+          "name": "Ginkgo biloba",
+          "amount": "20 mg",
+          "rda": ""
+        },
+        {
+          "name": "Green tea extract",
+          "amount": "20 mg",
+          "rda": ""
+        },
+        {
+          "name": "Citrus bioflavonoids",
+          "amount": "10 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Vitamin mix, Mineral mix, Maltodextrin, Curcumin, Ginkgo biloba, Green tea extract, Citrus bioflavonoids. HPMC shell.",
+      "benefits": [
+        "24 essential micronutrients",
+        "Herbal extracts: green tea, bioflavonoids, curcumin, ginkgo",
+        "'Brain-body coordinator' (ginkgo + curcumin)",
+        "Vegan HPMC capsule",
+        "Reduces micronutrient deficiency"
+      ],
+      "packClaims": [
+        "Provides 24 Micronutrients (Vitamins & Minerals)",
+        "Citrus Flavonoids, Green Tea, Curcumin & Ginkgo",
+        "Improves Overall Health and Wellness"
+      ],
+      "dosage": "1-2 veg capsules per day after meals",
+      "precautions": "Consult doctor if pregnant/lactating or on medication."
+    },
+    {
+      "slug": "green-good",
+      "position": 4,
+      "name": "GreenGood",
+      "tagline": "Plant Powered Wellness",
+      "format": "Powder",
+      "pack": "See label",
+      "category": "Detox & Vitality",
+      "type": "Nutraceutical",
+      "composition": [
+        {
+          "name": "Sodium copper chlorophyllin (per 1 g serving)",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Guarana seed extract",
+          "amount": "50 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Dextrose, Chlorophyll powder, Guarana seed extract, Potassium sorbate, Silicon dioxide, nature-identical flavours.",
+      "benefits": [
+        "Natural detox",
+        "Supports haemoglobin levels",
+        "Supports blood oxygen levels",
+        "Revitalises body and mind"
+      ],
+      "packClaims": [
+        "Improves Oxygen Saturation Levels",
+        "Natural Anti-Oxidant",
+        "Revitalises the Body and Mind"
+      ],
+      "dosage": "As directed on label",
+      "precautions": "Contains caffeine (guarana)."
+    },
+    {
+      "slug": "healogen",
+      "position": 5,
+      "name": "Healogen",
+      "tagline": "Enhanced Wound Healing",
+      "format": "Powder",
+      "pack": "200 g jar, 10 servings; Coco-Caramel / French Vanilla / Rich Milk Chocolate",
+      "category": "Clinical / Medical Nutrition",
+      "type": "Medical Nutrition",
+      "composition": [
+        {
+          "name": "Protein",
+          "amount": "10 g",
+          "rda": ""
+        },
+        {
+          "name": "Glutamine peptides",
+          "amount": "1000 mg",
+          "rda": ""
+        },
+        {
+          "name": "L-Glutamine",
+          "amount": "1000 mg",
+          "rda": ""
+        },
+        {
+          "name": "BCAA 2:1:1",
+          "amount": "1000 mg",
+          "rda": ""
+        },
+        {
+          "name": "Collagen peptides",
+          "amount": "500 mg",
+          "rda": ""
+        },
+        {
+          "name": "Coenzyme Q10",
+          "amount": "10 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin A",
+          "amount": "600 mcg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin E",
+          "amount": "10 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin C",
+          "amount": "40 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Beta carotene",
+          "amount": "4800 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Probiotic blend (4 strains)",
+          "amount": "10 billion CFU",
+          "rda": ""
+        },
+        {
+          "name": "MCT",
+          "amount": "0.5 g",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Whey protein peptide, Glutamine peptides, Collagen peptides, MCT, Maltodextrin, Inulin, Probiotic blend, Vitamins, Sucralose, permitted flavours.",
+      "benefits": [
+        "Complete nutrients for tissue rebuilding",
+        "Antioxidants (beta carotene, CoQ10, tocopherols) help prevent surgical-wound infection",
+        "Probiotics shown to aid wound healing in diabetic patients",
+        "Osmolarity 280-300 mOsm/L: suitable for enteral tube feeding"
+      ],
+      "packClaims": [
+        "Enhances Tissue Regeneration",
+        "Enriched with Super Anti-oxidants",
+        "Specialised Probiotic Blend for Faster Recovery"
+      ],
+      "dosage": "1 scoop (20 g) in 150 ml water",
+      "precautions": "Use under medical supervision."
+    },
+    {
+      "slug": "herbagut",
+      "position": 6,
+      "name": "HerbaGut",
+      "tagline": "Natural Gut Health Formula",
+      "format": "Veg capsules (size 00)",
+      "pack": "30 veg capsules",
+      "category": "Gut & Digestive Health",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Herbagut herbal blend",
+          "amount": "400 mg",
+          "rda": ""
+        },
+        {
+          "name": "Bacillus coagulans (probiotic)",
+          "amount": "2 billion CFU",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Herbagut blend, Bacillus coagulans, Maltodextrin, anti-caking agents. HPMC shell.",
+      "benefits": [
+        "Reduces gas and bloating",
+        "Supports healthy digestion",
+        "Relieves acid reflux",
+        "Helps manage IBS",
+        "Replenishes gut bacteria"
+      ],
+      "packClaims": [
+        "Reduces Abdominal Gas and Bloating",
+        "Helps in the Management of IBS",
+        "Replenishes Gut Bacteria (Reverse Dysbiosis)"
+      ],
+      "dosage": "1-2 capsules per day or as suggested by physician",
+      "precautions": "Consult doctor if pregnant/lactating/on medication."
+    },
+    {
+      "slug": "herbasome",
+      "position": 7,
+      "name": "Herbosome",
+      "tagline": "Liposomal Curcumin",
+      "format": "Veg capsules",
+      "pack": "HDPE bottle",
+      "category": "Gut & Inflammation",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Liposomal curcumin, water-soluble (22% curcuminoids, HPLC)",
+          "amount": "500 mg",
+          "rda": ""
+        },
+        {
+          "name": "Piperine (BioPerine)",
+          "amount": "5 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "As above. Other: Dicalcium phosphate, Silicon dioxide, Magnesium stearate. HPMC shell.",
+      "benefits": [
+        "4x bioavailability vs standard curcumin",
+        "Helps reduce gut inflammation",
+        "Supports IBS/IBD management",
+        "Natural analgesic and antibacterial",
+        "Reduces muscle fatigue linked to inflammation"
+      ],
+      "packClaims": [
+        "Natural Analgesic and Antipyretic",
+        "Reduces Inflammation and Peptic Ulcers",
+        "Helps in the Management of IBS / IBD"
+      ],
+      "dosage": "1-2 capsules per day or as suggested by physician",
+      "precautions": "Consult doctor if on blood thinners."
+    },
+    {
+      "slug": "menmaxx",
+      "position": 8,
+      "name": "MenMaxx",
+      "tagline": "Energy Booster For Men",
+      "format": "Veg capsules",
+      "pack": "HDPE bottle",
+      "category": "Men's Vitality",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Liposomal Ashwagandha extract (8% withanolides, enzymatically processed)",
+          "amount": "400 mg",
+          "rda": ""
+        },
+        {
+          "name": "Proprietary Terminalia blend (Arjuna, Chebula, Bellirica; 40% tannins)",
+          "amount": "100 mg",
+          "rda": ""
+        },
+        {
+          "name": "Sarpagandha (2% alpha-yohimbine)",
+          "amount": "25 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "As above. Other: Maltodextrin, Silicon dioxide, Magnesium stearate. HPMC shell.",
+      "benefits": [
+        "Reduces stress, anxiety and cortisol",
+        "Adaptogen formula",
+        "Improves alertness and cognition",
+        "Vitality enhancer, supports healthy testosterone",
+        "Triple-Terminalia + liposomal ashwagandha",
+        "Patent-pending formula (per brand; verify before publishing)"
+      ],
+      "packClaims": [
+        "Natural Testosterone Booster",
+        "Improves Erectile & Orgasmic Function",
+        "Reduces Stress & Anxiety"
+      ],
+      "dosage": "As directed on label / by physician",
+      "precautions": "Contains Sarpagandha: regulatory and medical review needed before online claims."
+    },
+    {
+      "slug": "momvit",
+      "position": 9,
+      "name": "MomVit",
+      "tagline": "UNIMMAP MMS Formula",
+      "format": "Tablets",
+      "pack": "30 tablets",
+      "category": "Women's & Maternal Health",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Vitamin A",
+          "amount": "800 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin C",
+          "amount": "70 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin D",
+          "amount": "5 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin E",
+          "amount": "10 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B1",
+          "amount": "1.4 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B2",
+          "amount": "1.4 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B3",
+          "amount": "18 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B6",
+          "amount": "1.9 mg",
+          "rda": ""
+        },
+        {
+          "name": "Folic acid",
+          "amount": "680 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "2.6 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Iron (ferrous fumarate)",
+          "amount": "30 mg",
+          "rda": ""
+        },
+        {
+          "name": "Iodine",
+          "amount": "150 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Zinc",
+          "amount": "15 mg",
+          "rda": ""
+        },
+        {
+          "name": "Selenium",
+          "amount": "65 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Copper",
+          "amount": "2 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "15 micronutrients as above with standard tablet excipients.",
+      "benefits": [
+        "Built to the UN UNIMMAP multiple-micronutrient formula for pregnancy",
+        "Composition aligned with the WHO Essential Medicines List (MMS)",
+        "15 micronutrients in one tablet"
+      ],
+      "packClaims": [
+        "Prevents Pregnancy-Related Anemia",
+        "Supports Healthy Fetal Growth & Development",
+        "Boosts Maternal Energy & Reduces Fatigue"
+      ],
+      "dosage": "1 tablet per day after meals from second trimester onwards, or as directed by healthcare provider",
+      "precautions": "Use under medical advice during pregnancy."
+    },
+    {
+      "slug": "omegasea",
+      "position": 10,
+      "name": "OmegaSea",
+      "tagline": "Sea Buckthorn Oil Capsules",
+      "format": "Veg liquid-filled capsules",
+      "pack": "30 capsules, HDPE bottle",
+      "category": "Heart, Skin & Omega",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Seabuckthorn oil",
+          "amount": "500 mg",
+          "rda": "RDA not established"
+        }
+      ],
+      "ingredients": "Seabuckthorn oil, mixed tocopherols. HPMC shell.",
+      "benefits": [
+        "Plant source of Omega 3, 6, 7 and 9",
+        "Natural antioxidant",
+        "Supports cardiovascular health",
+        "Improves skin texture and moisturisation"
+      ],
+      "packClaims": [
+        "Natural Source of Omega 3, 6, 7 & 9",
+        "Supports Cardiovascular Health",
+        "Improves Skin Texture & Moisturization"
+      ],
+      "dosage": "1-2 capsules per day or as suggested by physician",
+      "precautions": "For people above 12 years."
+    },
+    {
+      "slug": "optimeal-maxx",
+      "position": 11,
+      "name": "Optimeal Max",
+      "tagline": "Hypermetabolic Diet",
+      "format": "Powder sachets",
+      "pack": "500 g (15 x 33 g); Vanilla, Choco-Coffee, Rich Milk Chocolate, Strawberry",
+      "category": "Clinical / Medical Nutrition",
+      "type": "Food for Special Medical Purpose",
+      "composition": [
+        {
+          "name": "Energy",
+          "amount": "145 kcal / 33 g",
+          "rda": ""
+        },
+        {
+          "name": "Protein",
+          "amount": "11.6 g",
+          "rda": "19%"
+        },
+        {
+          "name": "MCT",
+          "amount": "4.5 g",
+          "rda": ""
+        },
+        {
+          "name": "Dietary fibre (incl. FOS)",
+          "amount": "2 g",
+          "rda": ""
+        },
+        {
+          "name": "DHA",
+          "amount": "20 mg",
+          "rda": ""
+        },
+        {
+          "name": "BCAA 2:1:1",
+          "amount": "150 mg",
+          "rda": ""
+        },
+        {
+          "name": "L-Glutamine",
+          "amount": "200 mg",
+          "rda": ""
+        },
+        {
+          "name": "26 micronutrients",
+          "amount": "50% RDA range",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Whey protein concentrate & isolate, Micellar casein, MCT powder, Maltodextrin, Inulin, FOS, vitamin/mineral/amino premixes, emulsifier, sucralose, natural flavours.",
+      "benefits": [
+        "High-PDCAAS protein, 11.6 g per serving",
+        "25% of fat from MCT",
+        "BCAA + glutamine for muscle preservation",
+        "Soluble fibre for gut health",
+        "All 26 micronutrients",
+        "Tube-feed ready: 1.21 kcal/ml, GI 41.8, osmolarity 275-300"
+      ],
+      "packClaims": [
+        "11.5 grams Protein Per Serve",
+        "Enriched with BCAA & Glutamine",
+        "Fortified Soluble Fibre supports Gut Health"
+      ],
+      "dosage": "1 sachet in 150 ml water, 1-2 servings/day or as recommended by physician",
+      "precautions": "Food for Special Medical Purpose: use under medical advice only. Not for parenteral use."
+    },
+    {
+      "slug": "optimeal-pro",
+      "position": 12,
+      "name": "Optimeal Pro",
+      "tagline": "Semi Elemental Diet",
+      "format": "Powder",
+      "pack": "500 g HDPE jar, 10 servings; Milky Chocolate, Strawberry, Vanilla",
+      "category": "Clinical / Medical Nutrition",
+      "type": "Medical Nutrition",
+      "composition": [
+        {
+          "name": "Protein (whey hydrolysate + isolate)",
+          "amount": "30 g / 50 g serving",
+          "rda": ""
+        },
+        {
+          "name": "Energy",
+          "amount": "225 kcal",
+          "rda": ""
+        },
+        {
+          "name": "MCT",
+          "amount": "5 g",
+          "rda": ""
+        },
+        {
+          "name": "Inulin",
+          "amount": "3 g",
+          "rda": ""
+        },
+        {
+          "name": "L-Glutamine",
+          "amount": "600 mg",
+          "rda": ""
+        },
+        {
+          "name": "BCAA 2:1:1",
+          "amount": "500 mg",
+          "rda": ""
+        },
+        {
+          "name": "Wellmune beta-glucan",
+          "amount": "40 mg",
+          "rda": ""
+        },
+        {
+          "name": "Bacillus coagulans",
+          "amount": "0.5 billion CFU",
+          "rda": ""
+        },
+        {
+          "name": "Digestive enzymes (papain, bromelain, amylase, lipase)",
+          "amount": "50 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Whey protein hydrolysate, Whey protein isolate, Inulin, Glutamine, Vegetable juice powder, Soy lecithin, Enzymes, Probiotic, Wellmune, BCAA, electrolytes, Sucralose, flavours.",
+      "benefits": [
+        "Pre-digested proteins to prevent bloating",
+        "Glutamine + BCAA help prevent sarcopenia in oncology patients",
+        "Wellmune + Vitamin C immunity support",
+        "Digestive enzymes aid absorption",
+        "Osmolarity 280-300 mOsm/L: tube-feed compatible"
+      ],
+      "packClaims": [
+        "Predigested Proteins prevents Bloating",
+        "Enhances Recovery",
+        "Suitable for Enteral Feeding"
+      ],
+      "dosage": "2 scoops (50 g) in 300 ml water or milk, 1-3 servings/day or as directed",
+      "precautions": "Use under medical advice."
+    },
+    {
+      "slug": "orthoflex-pro",
+      "position": 13,
+      "name": "Orthoflex Pro",
+      "tagline": "Advanced Stem Cell Support",
+      "format": "Powder",
+      "pack": "750 g, Citrus Punch flavour, 30 servings, scoop included",
+      "category": "Joint, Bone & Cellular Health",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Vitamin C",
+          "amount": "65 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin D3",
+          "amount": "600 IU",
+          "rda": "100%"
+        },
+        {
+          "name": "Proprietary StemCell Regeneration Support Blend (Glucosamine sulfate & HCl, Quercetin, L-Carnosine, Resveratrol, Bitter melon extract, Turmeric extract, Black pepper extract)",
+          "amount": "3500 mg",
+          "rda": "RDA not established"
+        }
+      ],
+      "ingredients": "As above. Other: Maltodextrin, Silicon dioxide, Sodium citrate, natural and nature-identical flavours and colours.",
+      "benefits": [
+        "9 actives selected on in-vitro stem-cell health data",
+        "Glucosamine sulfate & HCl for joint support",
+        "Curcumin + piperine: anti-inflammatory, antioxidant",
+        "Resveratrol & L-Carnosine for cellular health",
+        "Quercetin reduces cellular damage",
+        "Bitter melon for metabolic support",
+        "Vitamin C & D3 for cell function and immunity"
+      ],
+      "packClaims": [
+        "Improves Stem Cell Production",
+        "Reduces Joint Inflammation",
+        "Improves Joint Flexibility"
+      ],
+      "dosage": "Mix 25 g in 240 ml water, 1-2 servings per day or as suggested by physician",
+      "precautions": "Consult doctor if pregnant, lactating or on medication. Do not exceed recommended serving."
+    },
+    {
+      "slug": "power-fresh-plus",
+      "position": 14,
+      "name": "Power Fresh+",
+      "tagline": "Low Calorie, Instant Energy Drink",
+      "format": "Powder (instant drink)",
+      "pack": "See label",
+      "category": "Energy & Performance",
+      "type": "Nutraceutical",
+      "composition": [
+        {
+          "name": "Per 5 g: Energy",
+          "amount": "17.7 kcal",
+          "rda": ""
+        },
+        {
+          "name": "Natural caffeine",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Green tea extract",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Taurine",
+          "amount": "75 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin C",
+          "amount": "30 mg",
+          "rda": ""
+        },
+        {
+          "name": "Inositol",
+          "amount": "10 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B1",
+          "amount": "0.7 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B6",
+          "amount": "1 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "1 mcg",
+          "rda": ""
+        },
+        {
+          "name": "Sodium chloride",
+          "amount": "60 mg",
+          "rda": ""
+        },
+        {
+          "name": "Potassium chloride",
+          "amount": "40 mg",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Dextrose, Glucono delta lactone, Taurine, Natural caffeine, Vitamin mix, Inositol, Green tea extract, Citric acid, Sodium citrate, Sodium chloride, Potassium chloride, Sucralose.",
+      "benefits": [
+        "Natural energy booster",
+        "Improves performance and endurance",
+        "Helps reduce fatigue",
+        "Enhances basal metabolism",
+        "Low calorie, no added preservatives"
+      ],
+      "packClaims": [
+        "Improves Energy and Endurance",
+        "Reduces Fatigue",
+        "100% Natural Actives"
+      ],
+      "dosage": "Dissolve 5 g (1 scoop) in 100 ml water, best chilled. 1-2 servings/day.",
+      "precautions": "Consult doctor if pregnant/lactating/on medication."
+    },
+    {
+      "slug": "primmune-pro",
+      "position": 15,
+      "name": "Primmune Pro",
+      "tagline": "Innate Immunity Booster",
+      "format": "Veg capsules",
+      "pack": "60 veg capsules, HDPE bottle",
+      "category": "Immunity",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Shiitake mushroom extract (20% polysaccharides, AHCC)",
+          "amount": "500 mg",
+          "rda": "RDA not established"
+        },
+        {
+          "name": "Vitamin D3",
+          "amount": "600 IU",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin C",
+          "amount": "40 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin E (mixed tocopherols)",
+          "amount": "10 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin B6",
+          "amount": "2 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Zinc (as zinc sulphate)",
+          "amount": "6 mg",
+          "rda": "50%"
+        },
+        {
+          "name": "Beta carotene",
+          "amount": "5 mg",
+          "rda": "10%"
+        }
+      ],
+      "ingredients": "Shiitake mushroom extract, vitamins, zinc, beta carotene. Other: Maltodextrin, Silicon dioxide, Magnesium stearate. HPMC shell.",
+      "benefits": [
+        "AHCC-standardised shiitake mushroom for immune modulation",
+        "Complete immune micronutrient stack (D3, C, E, B6, Zinc)",
+        "Antioxidant beta carotene"
+      ],
+      "packClaims": [
+        "Supercharges Natural Killer Cells",
+        "Enhances White Blood Cell Activity",
+        "Protection Against Seasonal Flu"
+      ],
+      "dosage": "1-2 capsules per day or as suggested by physician",
+      "precautions": "For people above 18 years."
+    },
+    {
+      "slug": "sadnil",
+      "position": 16,
+      "name": "SAD-Nil",
+      "tagline": "Peace of Mind, Naturally",
+      "format": "Veg capsules",
+      "pack": "30 veg capsules",
+      "category": "Brain, Mood & Stress",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Ashwagandha extract",
+          "amount": "100 mg",
+          "rda": ""
+        },
+        {
+          "name": "Brahmi extract",
+          "amount": "100 mg",
+          "rda": ""
+        },
+        {
+          "name": "Shankhapushpi extract",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Amla extract",
+          "amount": "100 mg",
+          "rda": ""
+        },
+        {
+          "name": "Vitamin D3 (Cholecalciferol)",
+          "amount": "600 IU",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin B6 (Pyridoxine HCl)",
+          "amount": "2.4 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin B9 (Folic acid)",
+          "amount": "300 mcg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin B12 (Cyanocobalamin)",
+          "amount": "2.2 mcg",
+          "rda": "100%"
+        },
+        {
+          "name": "Zinc (as Zinc oxide)",
+          "amount": "8.5 mg",
+          "rda": "50%"
+        },
+        {
+          "name": "Magnesium (as Magnesium oxide)",
+          "amount": "100 mg",
+          "rda": "23%"
+        }
+      ],
+      "ingredients": "Ashwagandha extract, Brahmi extract, Shankhapushpi extract, Amla extract, Vitamin mix, Zinc oxide, Magnesium oxide, Maltodextrin. Capsule shell: HPMC.",
+      "benefits": [
+        "Helps reduce stress, anxiety and low mood",
+        "Helps improve neurocognitive function",
+        "Helps reduce restlessness and promotes calmness",
+        "Natural mood elevator"
+      ],
+      "packClaims": [
+        "Reduces Stress, Anxiety and Depression",
+        "Improves Neurocognitive Function",
+        "Natural Mood Elevator"
+      ],
+      "dosage": "1-2 capsules per day, preferably after dinner, or as directed by physician",
+      "precautions": "For adults above 18. Consult physician if pregnant, lactating or on other medication."
+    },
+    {
+      "slug": "shredd-360",
+      "position": 17,
+      "name": "SHREDD-360",
+      "tagline": "Thermogenic Fat Burner",
+      "format": "Powder (drink mix)",
+      "pack": "300 g, 60 servings, natural flavour",
+      "category": "Weight Management & Metabolism",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Per 2 x 5 g: Energy",
+          "amount": "27.2 kcal",
+          "rda": ""
+        },
+        {
+          "name": "Dietary fibre",
+          "amount": "1.82 g",
+          "rda": "7%"
+        },
+        {
+          "name": "Calcium",
+          "amount": "78 mg",
+          "rda": "8%"
+        },
+        {
+          "name": "Iron",
+          "amount": "2 mg",
+          "rda": "11%"
+        },
+        {
+          "name": "Magnesium",
+          "amount": "20 mg",
+          "rda": "5%"
+        }
+      ],
+      "ingredients": "Amaranth seed, Curry leaves, Coriander, Mint, Tulsi, Fenugreek leaves, Black pepper, Cinnamon, Black salt, Pink salt, Apple powder, Turmeric, Silicon dioxide.",
+      "benefits": [
+        "Natural thermogenic fat burner",
+        "Helps manage bloating and gas",
+        "Supports weight management",
+        "Detoxes the gut",
+        "100% natural kitchen-herb ingredients"
+      ],
+      "packClaims": [
+        "Helps in Weight Management",
+        "Natural Thermogenic Fat Burner",
+        "100% Natural Ingredients"
+      ],
+      "dosage": "Dissolve 5 g in 200 ml water with half a lemon, before meals. 2 servings/day for best results.",
+      "precautions": "Adults above 18. Consult physician if pregnant or lactating."
+    },
+    {
+      "slug": "sleep-support",
+      "position": 18,
+      "name": "SLEEP Support",
+      "tagline": "Reclaim your Calm",
+      "format": "Veg capsules",
+      "pack": "30 veg capsules, monocarton",
+      "category": "Sleep & Relaxation",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Bioactive milk peptides",
+          "amount": "100 mg",
+          "rda": ""
+        },
+        {
+          "name": "L-Tryptophan",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Glycine",
+          "amount": "75 mg",
+          "rda": ""
+        },
+        {
+          "name": "L-Theanine",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Ginkgo biloba extract",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Magnesium",
+          "amount": "85 mg",
+          "rda": "25%"
+        },
+        {
+          "name": "Vitamin B6",
+          "amount": "2 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "1 mcg",
+          "rda": "100%"
+        }
+      ],
+      "ingredients": "As above. Other: Maltodextrin, Silicon dioxide, Magnesium stearate. HPMC shell.",
+      "benefits": [
+        "Natural stress buster",
+        "Helps mood elevation",
+        "Promotes sound sleep",
+        "Non-habit forming"
+      ],
+      "packClaims": [
+        "Promotes Sound Sleep",
+        "Natural Stress Buster",
+        "Non Habit Forming"
+      ],
+      "dosage": "1 capsule per day with dinner, or as directed by physician",
+      "precautions": "Consult physician if pregnant/lactating or on other medicines."
+    },
+    {
+      "slug": "stressnil",
+      "position": 19,
+      "name": "STRESS-Nil",
+      "tagline": "Unwind Naturally",
+      "format": "Veg capsules",
+      "pack": "30 veg capsules, HDPE bottle",
+      "category": "Brain, Mood & Stress",
+      "type": "Health Supplement",
+      "composition": [
+        {
+          "name": "Bioactive milk peptides (Lactium)",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Natural caffeine",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Saffron extract (2% safranal)",
+          "amount": "50 mg",
+          "rda": ""
+        },
+        {
+          "name": "Ginkgo biloba extract (24%)",
+          "amount": "40 mg",
+          "rda": ""
+        },
+        {
+          "name": "Magnesium",
+          "amount": "50 mg",
+          "rda": "13.5%"
+        },
+        {
+          "name": "Vitamin B6",
+          "amount": "2 mg",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "2.2 mcg",
+          "rda": "100%"
+        }
+      ],
+      "ingredients": "As above. Other: Maltodextrin, Magnesium stearate, Silicon dioxide. HPMC shell.",
+      "benefits": [
+        "Helps reduce stress and anxiety",
+        "Natural mood elevator (saffron)",
+        "Calmness via GABA-pathway milk peptides",
+        "Improves cognitive function (nootropic adaptogen)",
+        "Helps regulate irregular sleep cycles",
+        "Non-habit forming; GRAS-listed actives",
+        "Noticeable improvement within 4-5 days"
+      ],
+      "packClaims": [
+        "Helps in Reducing Day Stress",
+        "Natural Mood Elevator",
+        "Improves Cognitive Function"
+      ],
+      "dosage": "Mild stress: 1 capsule/day. Moderate-high stress: 2 capsules/day. Use up to 90 days, 1-2 week break.",
+      "precautions": "Women 18+ (formulation focus). Consult physician if pregnant/lactating or on other medicines."
+    },
+    {
+      "slug": "vita-dk7",
+      "position": 20,
+      "name": "VitaDK7",
+      "tagline": "100% RDA of Vit D3 & K2",
+      "format": "Veg capsules",
+      "pack": "30 capsules",
+      "category": "Bone & Heart Health",
+      "type": "Health Supplement (Rx)",
+      "composition": [
+        {
+          "name": "Vitamin D3 (Cholecalciferol)",
+          "amount": "600 IU",
+          "rda": "100%"
+        },
+        {
+          "name": "Vitamin K2-7 (natural)",
+          "amount": "see label",
+          "rda": ""
+        }
+      ],
+      "ingredients": "Cholecalciferol, Vitamin K2-7 powder, Maltodextrin, Silicon dioxide (E551), Magnesium stearate. HPMC shell.",
+      "benefits": [
+        "Vegetarian sources of Vitamin D3 and Vitamin K2-7",
+        "Micro-encapsulated for high bioavailability",
+        "Helps prevent osteoporosis in men and women above 30"
+      ],
+      "packClaims": [
+        "Improves Bone Calcification & Prevents Osteoporosis",
+        "Enhances Bone Strength",
+        "Improves Nervous System Health"
+      ],
+      "dosage": "1-2 capsules per day after meals, or as directed by physician",
+      "precautions": "Prescription use under medical supervision if on blood thinners, or with heart, liver, renal or coagulation disorders."
+    }
+  ]
+}

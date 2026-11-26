@@ -57,6 +57,7 @@ jobs:
       - run: npm run db:deploy
       - name: Fail if the schema has changes without a migration
         run: npx prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma --exit-code
+      - run: npm run db:seed
       - run: npm run test:integration
       - run: npm run build
       - run: npm audit --audit-level=high

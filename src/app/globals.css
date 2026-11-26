@@ -2,4 +2,10 @@
 
 @theme {
   --color-brand: #0350c4;
+  --color-accent: #e07b12;
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }

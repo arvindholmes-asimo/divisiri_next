@@ -15,6 +15,7 @@ const config: NextConfig = {
   reactStrictMode: true,
   // Pinned so that lockfiles in parent folders cannot change the project root.
   turbopack: { root: process.cwd() },
+  images: { qualities: [75, 90] },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

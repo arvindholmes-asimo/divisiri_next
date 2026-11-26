@@ -7,8 +7,59 @@ datasource db {
   provider = "postgresql"
 }
 
-// Domain tables arrive with their milestones. AuditLog comes first because
-// every later admin action writes to it.
+enum PublishStatus {
+  DRAFT // visible outside production only
+  PUBLISHED
+}
+
+// SKUs and flavour variants are added with stock management.
+model Product {
+  id          String        @id @default(uuid()) @db.Uuid
+  slug        String        @unique
+  status      PublishStatus @default(DRAFT)
+  position    Int
+  name        String
+  tagline     String
+  format      String
+  pack        String
+  category    String
+  type        String
+  composition Json // [{ name, amount, rda }]
+  ingredients String
+  benefits    String[]
+  packClaims  String[]
+  dosage      String
+  precautions String
+  // Null until an approved price exists. Integer paise.
+  mrpPaise    Int?
+  pricePaise  Int?
+  createdAt   DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt   DateTime      @updatedAt @db.Timestamptz(3)
+  concerns    ConcernProduct[]
+
+  @@index([status, position])
+}
+
+model Concern {
+  id       String           @id @default(uuid()) @db.Uuid
+  slug     String           @unique
+  name     String
+  position Int
+  products ConcernProduct[]
+}
+
+model ConcernProduct {
+  concernId String  @db.Uuid
+  productId String  @db.Uuid
+  position  Int
+  concern   Concern @relation(fields: [concernId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([concernId, productId])
+  @@index([productId])
+}
+
+// AuditLog exists early because every later admin action writes to it.
 model AuditLog {
   id         String   @id @default(uuid()) @db.Uuid
   actor      String

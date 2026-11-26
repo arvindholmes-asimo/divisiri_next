@@ -12,6 +12,7 @@ cp .env.example .env
 npm ci
 npm run db:up
 npm run db:deploy
+npm run db:seed
 npm run dev
 ```
 Open http://localhost:3000. http://localhost:3000/api/health returns `{"status":"ok"}`
@@ -28,11 +29,18 @@ in your shell and change the port in `DATABASE_URL`.
 | `npm run build` | Production build (needs no secrets) |
 | `npm run db:migrate` | Create and apply a migration after editing the schema |
 | `npm run db:generate` | Regenerate the Prisma client after a schema change |
+| `npm run db:seed` | Load `catalog/catalog.json` (development and test only) |
+| `npm run images:import -- <folder>` | Replace product photos (see `docs/product-photos.md`) |
+| `npm run catalog:import -- <mockup.html>` | Re-extract the catalogue from the design mockup |
 | `npm run secrets:scan` | Scan committable files for secrets (needs Docker) |
 
 ## Layout
 ```
 src/app/          pages and route handlers
+src/components/   shared page parts
+src/modules/      business logic, one folder per domain
+catalog/          product data extracted from the design
+public/products/  product photos, named by product
 src/lib/          environment validation and database client
 prisma/           schema and migrations
 tests/            unit, integration and fakes
@@ -40,8 +48,10 @@ scripts/          repository checks
 infra/docker/     local database
 docs/decisions/   recorded decisions
 ```
-Business modules (`src/modules/`) and vendor clients (`src/integrations/`) are added
-by the milestones that need them.
+More modules and vendor clients (`src/integrations/`) are added by the milestones that need them.
+
+Products load as drafts. Development shows drafts; production shows published products only.
+Prices stay empty until approved ones exist.
 
 ## Rules
 - Secrets live in `.env` locally and are supplied at run time elsewhere. Never commit them.
