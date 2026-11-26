@@ -1,0 +1,23 @@
+# Local development database only. Production Compose arrives in the next milestone.
+name: divisiri-shop
+
+services:
+  db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: shop
+      POSTGRES_PASSWORD: local-dev-only
+      POSTGRES_DB: shop
+    ports:
+      # Loopback only: never reachable from the network.
+      - "127.0.0.1:${SHOP_DB_PORT:-5433}:5432"
+    volumes:
+      - db-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U shop -d shop -h 127.0.0.1"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  db-data:

@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Scan history for secrets
+        run: |
+          docker run --rm -v "$PWD:/repo:ro" ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            git /repo --redact --no-banner
+
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_USER: shop
+          POSTGRES_PASSWORD: local-dev-only
+          POSTGRES_DB: shop
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U shop -d shop -h 127.0.0.1"
+          --health-interval 3s
+          --health-retries 20
+    env:
+      APP_ENV: test
+      APP_URL: http://localhost:3000
+      # Throwaway database that exists only for this job.
+      DATABASE_URL: postgresql://shop:local-dev-only@127.0.0.1:5433/shop
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run check:boundaries
+      - run: npm test
+      - run: npm run db:deploy
+      - name: Fail if the schema has changes without a migration
+        run: npx prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma --exit-code
+      - run: npm run test:integration
+      - run: npm run build
+      - run: npm audit --audit-level=high
