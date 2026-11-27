@@ -25,7 +25,7 @@ export default function StoreLayout({ children }: Readonly<{ children: React.Rea
       <header className="border-b border-slate-200">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-2 px-4 py-3">
           <Link href="/">
-            <Image src="/logo.png" alt="DiviSiri home" width={140} height={62} preload />
+            <Image src="/logo.png" alt="DiviSiri home" width={180} height={53} preload />
           </Link>
           <nav aria-label="Main" className="flex flex-wrap gap-x-6 text-sm font-semibold">
             {links.map((link) => (
