@@ -63,7 +63,7 @@ export const getCart = cache(async (): Promise<Cart | null> => {
   if (!id) return null;
   try {
     const { cart } = await medusa<{ cart: Cart }>(
-      `/store/carts/${id}?fields=+completed_at,*payment_collection.payment_sessions`,
+      `/store/carts/${id}?fields=+completed_at,+items.total,*payment_collection.payment_sessions`,
     );
     return cart.completed_at ? null : cart;
   } catch (error) {
@@ -104,6 +104,6 @@ export async function rememberOrder(orderId: string) {
 export async function getPlacedOrder(): Promise<Order | null> {
   const id = await readCookie(ORDER_COOKIE);
   if (!id) return null;
-  const { order } = await medusa<{ order: Order }>(`/store/orders/${id}`);
+  const { order } = await medusa<{ order: Order }>(`/store/orders/${id}?fields=+items.total`);
   return order;
 }

@@ -58,6 +58,36 @@ jobs:
       - name: Fail if the schema has changes without a migration
         run: npx prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma --exit-code
       - run: npm run db:seed
-      - run: npm run test:integration
+      - name: Check the Medusa backend
+        working-directory: backend
+        env:
+          DATABASE_URL: postgresql://shop:local-dev-only@127.0.0.1:5433/medusa
+          JWT_SECRET: ci-only-jwt-secret
+          COOKIE_SECRET: ci-only-cookie-secret
+          STORE_CORS: http://localhost:3000
+          ADMIN_CORS: http://localhost:9000
+          AUTH_CORS: http://localhost:9000
+        run: |
+          PGPASSWORD=local-dev-only createdb -h 127.0.0.1 -p 5433 -U shop medusa
+          npm ci
+          npm run typecheck
+          npm test
+          npm run migrate
+          npm run seed
+      - name: Run integration tests against the backend
+        env:
+          DATABASE_URL: postgresql://shop:local-dev-only@127.0.0.1:5433/medusa
+          JWT_SECRET: ci-only-jwt-secret
+          COOKIE_SECRET: ci-only-cookie-secret
+          STORE_CORS: http://localhost:3000
+          ADMIN_CORS: http://localhost:9000
+          AUTH_CORS: http://localhost:9000
+        run: |
+          export MEDUSA_BACKEND_URL=http://localhost:9000
+          export MEDUSA_PUBLISHABLE_KEY="$(PGPASSWORD=local-dev-only psql -h 127.0.0.1 -p 5433 -U shop -d medusa -Atc "select token from api_key where title='Storefront'")"
+          (cd backend && npm run dev > medusa.log 2>&1) &
+          timeout 180 sh -c 'until curl -sf http://localhost:9000/health; do sleep 2; done' || { cat backend/medusa.log; exit 1; }
+          # The storefront job's DATABASE_URL points at the Prisma database.
+          DATABASE_URL=postgresql://shop:local-dev-only@127.0.0.1:5433/shop npm run test:integration
       - run: npm run build
       - run: npm audit --audit-level=high
