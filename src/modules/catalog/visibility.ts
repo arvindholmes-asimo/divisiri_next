@@ -1,6 +1,7 @@
 import type { Env } from "@/lib/env-schema";
 
-// Production shows approved products only. Drafts carry unreviewed claims.
-export function visibleProducts(appEnv: Env["APP_ENV"]): { status?: "PUBLISHED" } {
-  return appEnv === "production" ? { status: "PUBLISHED" } : {};
+// Medusa's store API returns published products only. On top of that, production
+// hides any product whose claim review is not clearly closed.
+export function isVisible(appEnv: Env["APP_ENV"], metadata: { review_open?: unknown }): boolean {
+  return appEnv !== "production" || metadata.review_open === false;
 }

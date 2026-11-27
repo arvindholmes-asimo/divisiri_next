@@ -16,6 +16,7 @@ const catalog = JSON.parse(readFileSync("catalog/catalog.json", "utf8")) as {
     slug: string; position: number; name: string; tagline: string; format: string; pack: string;
     category: string; type: string; composition: { name: string; amount: string; rda: string }[];
     ingredients: string; benefits: string[]; packClaims: string[]; dosage: string; precautions: string;
+    reviewNotes?: string[];
   }[];
 };
 
@@ -26,10 +27,12 @@ try {
     const ids = new Map<string, string>();
     for (const product of catalog.products) {
       // status and prices are not listed, so re-seeding never overwrites them.
+      // An absent list is written as empty, so removing a note from the file closes it.
+      const data = { ...product, reviewNotes: product.reviewNotes ?? [] };
       const row = await tx.product.upsert({
         where: { slug: product.slug },
-        create: product,
-        update: product,
+        create: data,
+        update: data,
       });
       ids.set(product.slug, row.id);
     }

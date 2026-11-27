@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
-// Baseline headers. A Content-Security-Policy is added with Razorpay Checkout,
-// once the exact third-party origins are known.
+// Baseline headers. A Content-Security-Policy is still needed before launch. Its
+// Razorpay origins must be confirmed against a real test payment.
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },

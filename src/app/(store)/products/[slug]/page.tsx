@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { primaryButton } from "@/components/checkout/styles";
 import { Price } from "@/components/store/product-card";
+import { formatPaise } from "@/lib/money";
 import { getProduct } from "@/modules/catalog/queries";
+import { addToCart } from "@/modules/checkout/actions";
 import catalog from "../../../../../catalog/catalog.json";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -65,7 +68,19 @@ export default async function ProductPage({ params }: Props) {
           <p className="mt-4 text-2xl">
             <Price paise={product.pricePaise} />
           </p>
-          <p className="mt-2 rounded-xl bg-slate-100 p-4 text-sm">Online ordering is not open yet.</p>
+          {product.pricePaise !== null && product.mrpPaise !== null && (
+            <p className="text-sm text-slate-500">MRP {formatPaise(product.mrpPaise)} (inclusive of all taxes)</p>
+          )}
+          {product.pricePaise === null || !product.variantId ? (
+            <p className="mt-2 rounded-xl bg-slate-100 p-4 text-sm">Online ordering is not open yet.</p>
+          ) : (
+            <form action={addToCart} className="mt-4">
+              <input type="hidden" name="slug" value={product.slug} />
+              <button type="submit" className={primaryButton}>
+                Add to cart
+              </button>
+            </form>
+          )}
           {(medical || prescription) && (
             <p className="mt-3 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm font-semibold">
               {prescription ? "This product may require a prescription." : "Use under medical supervision."}
@@ -110,8 +125,9 @@ export default async function ProductPage({ params }: Props) {
           <Section title="How to use">
             <p className="text-slate-700">{product.dosage}</p>
           </Section>
-          <Section title="Precautions">
-            <p className="text-slate-700">{product.precautions}</p>
+          {/* Without approved precaution text, the heading must not suggest there are none. */}
+          <Section title={product.precautions ? "Precautions" : "Shelf life"}>
+            {product.precautions && <p className="text-slate-700">{product.precautions}</p>}
             <p className="mt-2 text-sm text-slate-500">Shelf life: {catalog.company.shelfLife}</p>
           </Section>
         </div>

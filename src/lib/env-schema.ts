@@ -7,7 +7,14 @@ const schema = z
   .object({
     APP_ENV: z.enum(["development", "test", "production"]),
     APP_URL: z.url({ protocol: /^https?$/ }),
-    DATABASE_URL: z.url({ protocol: /^postgres(ql)?$/ }),
+    // Medusa backend. Read on the server only.
+    MEDUSA_BACKEND_URL: z.url({ protocol: /^https?$/ }),
+    MEDUSA_PUBLISHABLE_KEY: z.string().startsWith("pk_"),
+    // Used only by the earlier Prisma schema and its tests.
+    DATABASE_URL: z.preprocess(
+      (value) => (value === "" ? undefined : value),
+      z.url({ protocol: /^postgres(ql)?$/ }).optional(),
+    ),
     RAZORPAY_KEY_ID: optional,
   })
   .superRefine((env, ctx) => {
@@ -18,7 +25,7 @@ const schema = z
     if (production && !env.APP_URL.startsWith("https://")) {
       fail("APP_URL", "must use https in production");
     }
-    if (production && env.DATABASE_URL.includes("local-dev-only")) {
+    if (production && env.DATABASE_URL?.includes("local-dev-only")) {
       fail("DATABASE_URL", "must not use the local development password in production");
     }
     if (env.RAZORPAY_KEY_ID) {

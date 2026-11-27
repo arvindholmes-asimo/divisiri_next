@@ -26,20 +26,64 @@ const dataId = Object.keys(manifest).find((id) => manifest[id].mime === "applica
 const data = JSON.parse(bytes(dataId).toString("utf8"));
 const resources = new Map(block("ext_resources").map((item) => [item.id, item.uuid]));
 
+// The mockup misspells some slugs. The pack label is the reference.
+// Image resources are still looked up under the mockup's own slug.
+const slugFixes = new Map([["herbasome", "herbosome"]]);
+const fixSlug = (slug) => slugFixes.get(slug) ?? slug;
+
 const slugOf = new Map(data.products.map((p) => [p.slug, p]));
 const concerns = data.concerns.map(([name, slug, productSlugs], position) => {
   for (const product of productSlugs) {
     if (!slugOf.has(product)) throw new Error(`${slug} lists unknown product ${product}`);
   }
-  return { slug, name, position, products: productSlugs };
+  return { slug, name, position, products: productSlugs.map(fixSlug) };
 });
 
-const products = data.products.map((p, position) => ({
-  slug: p.slug,
+// The mockup mixes staff notes into shopper text. Move each one to reviewNotes.
+// The test in tests/unit/catalog.test.ts catches the known note phrases.
+const staffNotes = [
+  {
+    slug: "menmaxx",
+    field: "benefits",
+    text: "Patent-pending formula (per brand; verify before publishing)",
+    replacement: null,
+  },
+  {
+    slug: "menmaxx",
+    field: "precautions",
+    text: "Contains Sarpagandha: regulatory and medical review needed before online claims.",
+    replacement: "",
+  },
+  {
+    slug: "stressnil",
+    field: "precautions",
+    text: "Women 18+ (formulation focus).",
+    replacement: "Women 18+.",
+  },
+];
+
+function separateNotes(product) {
+  const clean = { ...product };
+  const reviewNotes = [];
+  for (const { slug, field, text, replacement } of staffNotes) {
+    if (slug !== clean.slug) continue;
+    const value = clean[field];
+    if (!value.includes(text)) throw new Error(`${slug}: the staff note in ${field} has changed.`);
+    clean[field] = Array.isArray(value)
+      ? value.flatMap((item) => (item !== text ? [item] : replacement ? [replacement] : []))
+      : value.replace(text, replacement).trim();
+    reviewNotes.push(`${field}: ${text}`);
+  }
+  return reviewNotes.length ? { ...clean, reviewNotes } : clean;
+}
+
+const products = data.products.map((p, position) => separateNotes({
+  slug: fixSlug(p.slug),
   position,
   name: p.display,
   tagline: p.tagline,
-  format: p.format,
+  // Shoppers don't need the capsule shell size.
+  format: p.format.replace(" (size 00)", ""),
   pack: p.pack,
   category: p.category,
   type: p.type,
@@ -65,8 +109,9 @@ writeFileSync("catalog/catalog.json", JSON.stringify({ company, concerns, produc
 // Placeholder photography, replaced later with `npm run images:import`.
 mkdirSync("public/products", { recursive: true });
 const missing = [];
-for (const { slug } of products) {
-  const id = resources.get(`img_${slug}_800x1200`);
+for (const { slug: mockupSlug } of data.products) {
+  const slug = fixSlug(mockupSlug);
+  const id = resources.get(`img_${mockupSlug}_800x1200`);
   if (id) writeFileSync(`public/products/${slug}.webp`, bytes(id));
   else missing.push(slug);
 }

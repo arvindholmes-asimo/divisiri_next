@@ -30,6 +30,8 @@ model Product {
   packClaims  String[]
   dosage      String
   precautions String
+  // Staff notes, never shown to shoppers. Production hides a product while any is open.
+  reviewNotes String[]      @default([])
   // Null until an approved price exists. Integer paise.
   mrpPaise    Int?
   pricePaise  Int?

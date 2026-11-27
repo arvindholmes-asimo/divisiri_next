@@ -21,7 +21,7 @@ review (`compliance/product-claim-review.md`) before finalising photos.
 
 ## Product file names
 bonfortis-k2, charcoal-pro, cordyvital, dailyvit, green-good, healogen, herbagut,
-herbasome, menmaxx, momvit, omegasea, optimeal-maxx, optimeal-pro, orthoflex-pro,
+herbosome, menmaxx, momvit, omegasea, optimeal-maxx, optimeal-pro, orthoflex-pro,
 power-fresh-plus, primmune-pro, sadnil, shredd-360, sleep-support, stressnil, vita-dk7
 
 ## Import

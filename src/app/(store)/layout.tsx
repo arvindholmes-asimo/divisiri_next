@@ -10,6 +10,7 @@ const links = [
   { href: "/shop", label: "Shop all" },
   { href: "/#concerns", label: "Shop by concern" },
   { href: "/shop?concern=medical-nutrition", label: "Medical Nutrition" },
+  { href: "/cart", label: "Cart" },
 ];
 
 export default function StoreLayout({ children }: Readonly<{ children: React.ReactNode }>) {

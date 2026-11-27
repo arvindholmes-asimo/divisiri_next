@@ -24,7 +24,7 @@
       "products": [
         "herbagut",
         "charcoal-pro",
-        "herbasome",
+        "herbosome",
         "shredd-360"
       ]
     },
@@ -477,7 +477,7 @@
       "position": 6,
       "name": "HerbaGut",
       "tagline": "Natural Gut Health Formula",
-      "format": "Veg capsules (size 00)",
+      "format": "Veg capsules",
       "pack": "30 veg capsules",
       "category": "Gut & Digestive Health",
       "type": "Health Supplement",
@@ -510,7 +510,7 @@
       "precautions": "Consult doctor if pregnant/lactating/on medication."
     },
     {
-      "slug": "herbasome",
+      "slug": "herbosome",
       "position": 7,
       "name": "Herbosome",
       "tagline": "Liposomal Curcumin",
@@ -578,8 +578,7 @@
         "Adaptogen formula",
         "Improves alertness and cognition",
         "Vitality enhancer, supports healthy testosterone",
-        "Triple-Terminalia + liposomal ashwagandha",
-        "Patent-pending formula (per brand; verify before publishing)"
+        "Triple-Terminalia + liposomal ashwagandha"
       ],
       "packClaims": [
         "Natural Testosterone Booster",
@@ -587,7 +586,11 @@
         "Reduces Stress & Anxiety"
       ],
       "dosage": "As directed on label / by physician",
-      "precautions": "Contains Sarpagandha: regulatory and medical review needed before online claims."
+      "precautions": "",
+      "reviewNotes": [
+        "benefits: Patent-pending formula (per brand; verify before publishing)",
+        "precautions: Contains Sarpagandha: regulatory and medical review needed before online claims."
+      ]
     },
     {
       "slug": "momvit",
@@ -1302,7 +1305,10 @@
         "Improves Cognitive Function"
       ],
       "dosage": "Mild stress: 1 capsule/day. Moderate-high stress: 2 capsules/day. Use up to 90 days, 1-2 week break.",
-      "precautions": "Women 18+ (formulation focus). Consult physician if pregnant/lactating or on other medicines."
+      "precautions": "Women 18+. Consult physician if pregnant/lactating or on other medicines.",
+      "reviewNotes": [
+        "precautions: Women 18+ (formulation focus)."
+      ]
     },
     {
       "slug": "vita-dk7",

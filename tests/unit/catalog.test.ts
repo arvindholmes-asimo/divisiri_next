@@ -1,16 +1,18 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { formatPaise } from "@/lib/money";
-import { visibleProducts } from "@/modules/catalog/visibility";
+import { isVisible } from "@/modules/catalog/visibility";
 import catalog from "../../catalog/catalog.json";
 
-describe("visibleProducts", () => {
-  it("limits production to published products", () => {
-    expect(visibleProducts("production")).toEqual({ status: "PUBLISHED" });
+describe("isVisible", () => {
+  it("hides anything not clearly reviewed in production", () => {
+    expect(isVisible("production", { review_open: false })).toBe(true);
+    expect(isVisible("production", { review_open: true })).toBe(false);
+    expect(isVisible("production", {})).toBe(false);
   });
 
-  it.each(["development", "test"] as const)("shows drafts in %s", (env) => {
-    expect(visibleProducts(env)).toEqual({});
+  it.each(["development", "test"] as const)("shows products under review in %s", (env) => {
+    expect(isVisible(env, { review_open: true })).toBe(true);
   });
 });
 
@@ -37,6 +39,12 @@ describe("catalog.json", () => {
   it("links concerns only to known products", () => {
     const linked = catalog.concerns.flatMap((concern) => concern.products);
     expect(linked.filter((slug) => !slugs.includes(slug))).toEqual([]);
+  });
+
+  it("keeps staff notes out of text that shoppers see", () => {
+    const shown = catalog.products.map((product) => JSON.stringify({ ...product, reviewNotes: undefined }));
+    const staffNote = /review needed|verify before|before publishing|before online|per brand|formulation focus/i;
+    expect(shown.filter((text) => staffNote.test(text))).toEqual([]);
   });
 
   it("carries no prices and only the expected top-level data", () => {

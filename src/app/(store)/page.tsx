@@ -6,7 +6,7 @@ import { listConcerns, listProducts } from "@/modules/catalog/queries";
 // Same selections as the design. "Featured", because there are no sales yet.
 const HERO = ["bonfortis-k2", "primmune-pro", "optimeal-pro"];
 const FEATURED = [
-  "bonfortis-k2", "primmune-pro", "herbasome", "optimeal-pro",
+  "bonfortis-k2", "primmune-pro", "herbosome", "optimeal-pro",
   "omegasea", "stressnil", "momvit", "herbagut",
 ];
 

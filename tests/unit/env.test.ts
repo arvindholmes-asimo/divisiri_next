@@ -5,12 +5,16 @@ const development = {
   APP_ENV: "development",
   APP_URL: "http://localhost:3000",
   DATABASE_URL: "postgresql://shop:local-dev-only@127.0.0.1:5433/shop",
+  MEDUSA_BACKEND_URL: "http://localhost:9000",
+  MEDUSA_PUBLISHABLE_KEY: "pk_example",
 };
 
 const production = {
   APP_ENV: "production",
   APP_URL: "https://shop.divisiri.com",
   DATABASE_URL: "postgresql://shop:example-password@db:5432/shop",
+  MEDUSA_BACKEND_URL: "http://backend:9000",
+  MEDUSA_PUBLISHABLE_KEY: "pk_example",
 };
 
 // Built from parts so that secret scanners do not mistake them for real keys.
@@ -26,7 +30,7 @@ describe("parseEnv", () => {
     expect(parseEnv(production).APP_URL).toBe("https://shop.divisiri.com");
   });
 
-  it.each(["APP_ENV", "APP_URL", "DATABASE_URL"])("requires %s", (name) => {
+  it.each(["APP_ENV", "APP_URL", "MEDUSA_BACKEND_URL", "MEDUSA_PUBLISHABLE_KEY"])("requires %s", (name) => {
     expect(() => parseEnv({ ...development, [name]: undefined })).toThrow(name);
   });
 
